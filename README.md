@@ -1,5 +1,5 @@
 # count-the-days-v2.0
-conky based widget countdown for days until a specific date
+conky-based desktop-widget countdown for days until a specific date
 
 # Requirements
 You need to have conky installed:\
