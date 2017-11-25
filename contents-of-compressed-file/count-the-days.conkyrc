@@ -1,0 +1,51 @@
+conky.config = {
+
+
+	background = false,
+	update_interval = 30,
+
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+
+	alignment = 'top_right',
+	gap_x = 40,
+	gap_y = 40,
+	minimum_width = 120, minimum_height = 120,
+	maximum_width = 120,
+
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_argb_visual = false,
+	own_window_argb_value = 0,
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+	border_inner_margin = 1,
+	border_outer_margin = 1,
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	override_utf8_locale = true,
+	use_xft = true,
+--xftfont Dinreg:size=32
+	font = 'Ubuntu Mono:size=10',
+
+	xftalpha = 0.5,
+	uppercase = false,
+
+	default_color = 'orange',--text
+	color1 = '#999999',--lines
+	color2 = '#aaaaaa',--icons
+	color3 = '#888888',--footer
+	color4 = '#404040',--moon phase
+	color5 = '#444444',
+
+};
+
+conky.text = [[
+${image ~/.count-the-days/bg2.png -p 0,0 -s 120x120}${voffset 27}${font Ubuntu Mono:size=32}${execp python ~/.count-the-days/count-the-days.py | xargs ~/.count-the-days/align.sh}${font}
+${alignc}days to go
+]];
